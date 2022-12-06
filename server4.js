@@ -1,9 +1,5 @@
-/* In this updated version, the mysql module is imported at the top of the file using the require function, and a connection to the MySQL server is created using the mysql.createConnection() method. The user, password, and database options should be replaced with the appropriate values for your MySQL server.
-
-To use this code, you will need to have the mysql module installed, as well as the image file image.jpg in the same directory as the server.js file. You can install the mysql module using the following command
-npm install mysql
-
-Once the mysql module is installed and the server.js file is in the correct location, you can run the code using the node command and visit the website in your web browser. The website should function the same as before, but now it is also connected to a MySQL database.
+/* 
+To use this code, you will need to have the mysql module installed.
 
 */
 const http = require('http');

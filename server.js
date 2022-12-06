@@ -1,7 +1,6 @@
-/* In this updated version, the res.end() method is called with a string containing the HTML for the website. This HTML includes an img element that displays the image at the center of the page using the div element's text-align: center style.
+/* The res.end() method is called with a string containing the HTML for the website. This HTML includes an img element that displays the image at the center of the page using the div element's text-align: center style.
 
-You can save this code to a file named server.js and run it using the node command, as before. When you visit the website in your web browser, you should see the image at the center of the page.
-How to install node using NVM on Ubuntu 
+
 https://github.com/nvm-sh/nvm#install--update-script
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash

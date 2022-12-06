@@ -1,4 +1,4 @@
-/* In this updated version, the server function checks the request URL and serves the HTML for the website when the URL is /, and serves the image file when the URL is /logo-classicblue-800px.png. To serve the image file, the code uses the fs.createReadStream() method to create a readable stream for the image file, and then pipes the data from the stream to the response using the res.pipe() method.
+/* The server function checks the request URL and serves the HTML for the website when the URL is /, and serves the image file when the URL is /logo-classicblue-800px.png. To serve the image file, the code uses the fs.createReadStream() method to create a readable stream for the image file, and then pipes the data from the stream to the response using the res.pipe() method.
 
 To use this code, you will need to have an image file named logo-classicblue-800px.png in the same directory as the server.js file. You can then run the code using the node command and visit the website in your web browser, as before. The image from the local file should be displayed at the center of the page.
 

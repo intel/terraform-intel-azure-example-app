@@ -1,6 +1,3 @@
-/* In this updated version, the server function uses the pg.Pool class to create a connection pool for the database. The server function then connects to the database using the pool.connect() method and queries the users table using the client.query() method. The query result is used to build the HTML for the website, which includes a table displaying the data from the users table.
-
-*/
 
 const http = require('http');
 const fs = require('fs');
