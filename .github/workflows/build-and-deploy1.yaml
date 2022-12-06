@@ -1,0 +1,35 @@
+on: workflow_dispatch
+
+env:
+  WEBAPP_NAME: ${{ secrets.WEBAPP_NAME }}
+  PUBLISH_PROFILE: ${{ secrets.PUBLISH_PROFILE }}
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the repository
+      - uses: actions/checkout@v2
+
+      # Install the Azure CLI
+      - uses: azure/cli@v1
+        with:
+          azcliversion: latest
+
+      # Install the Azure Web Apps Deployment task
+      - uses: Azure/webapps-deploy@v2
+
+      # Build the server.js file
+      - run: npm install
+      - run: npm run build
+
+      # Deploy the built files to Azure using the publish profile
+      - uses: Azure/webapps-deploy@v2
+        with:
+          app-name: '$WEBAPP_NAME'
+          publish-profile: '$PUBLISH_PROFILE'
+          package: './build/server.js'
+
+      # Set the environment variables for the workflow
+      env:
+        WEBAPP_NAME: ${{ secrets.WEBAPP_NAME }}
+        PUBLISH_PROFILE: ${{ secrets.PUBLISH_PROFILE }}

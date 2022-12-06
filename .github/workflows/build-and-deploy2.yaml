@@ -1,0 +1,23 @@
+on: workflow_dispatch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the repository
+      - uses: actions/checkout@v2
+
+      # Install the Azure CLI
+      - uses: azure/cli@v1
+        with:
+          azcliversion: latest
+
+      # Authenticate to Azure using the Azure CLI
+      - run: az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
+
+      # Build the server.js file
+      - run: npm install
+      - run: npm run build
+
+      # Deploy the built files to Azure
+      - run: az webapp deployment source config-zip -g $RESOURCE_GROUP -n $WEBAPP_NAME --src ./build/server.js
