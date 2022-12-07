@@ -1,6 +1,7 @@
 name: "Terraform Run"
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'terraform/**'
@@ -23,7 +24,9 @@ jobs:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
       - name: Change working directory 
-        run: cd ./terraform/
+        run: |
+          cd ./terraform/
+          ls -al
 
       - name: Terraform Format
         id: fmt
