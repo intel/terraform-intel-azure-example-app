@@ -1,14 +1,11 @@
 name: "Terraform Run"
 
 on:
-  workflow_dispatch:
   push:
-    paths:
-      - 'terraform/**'
     branches:
       - main
   pull_request:
-
+  workflow_dispatch:
 jobs:
   terraform:
     name: "Terraform Run"
