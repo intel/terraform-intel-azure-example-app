@@ -5,8 +5,9 @@ module "optimized-mysql-server" {
   db_server_name      = "dev-intel-example-app01"
   db_password         = var.db_password
   tags = {
-    Owner    = "Intel.Terraform.Example.App@intel.com"
-    Duration = "8"
+    Owner       = "Intel.Terraform.Example.App@intel.com"
+    Duration    = "8"
+    Application = "My App DB"
   }
   db_firewall_rules = [
     {
