@@ -7,6 +7,7 @@ module "optimized-mysql-server" {
   tags = {
     Owner    = "Intel.Terraform.Example.App@intel.com"
     Duration = "8"
+    Application = "My App DB"
   }
   db_firewall_rules = [
     {
