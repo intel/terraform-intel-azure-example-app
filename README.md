@@ -17,3 +17,4 @@ This repository will showcase the integration across
 - Terraform Cloud
 - Intel Cloud Optimization Modules
 - Accompanying Sentinel Policies
+
