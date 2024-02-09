@@ -5,9 +5,9 @@
 
 # WORK IN PROGRESS
 
-## Intel® Cloud Optimization Modules for Terraform
+## Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2022, Intel Corporation
+© Copyright 2024, Intel Corporation
 
 ## Overview
 
